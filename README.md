@@ -14,12 +14,10 @@
  
 ## About
 
-This project consists of a user registration form with name, email, password and confirmed password fields. . When clicking on the register button, each field is validated according to the expected data type, if valid the data is inserted into the simulated API created for this test.
+This project consists of a registration form
+of users divided into several steps. This form has four parts, in the first part the user informs the contact data, name, e-mail, password and password confirmation, in the second part academic data are informed, the university or school and the degree obtained, in the third part the user enters a text talking about him/herself, finally the registration is confirmed and the registered information is displayed, except the password. In each part of the form, fields are validated and error messages are displayed if any.
 
-Among the main purposes of this system is the use of the react-form-hook library together with the validation of the Yup library, with which it is possible to create a schema with the specifications of the expected values for each input field. In addition, for the styles, Tailwind CSS was used again, but this time together with the tailwind-styled-components library, which works in the same way as the traditional styled-components, but with Tailwind CSS classes.
-To simulate the Rest API, the JSONServer library was used as well as Axios to consume the API. The user login functionality would be the next step to be implemented.
-
-As in the previous project, this one was developed with TypeScript.
+For this system, the React Form Hook and Yup library were used to control and validate the forms, React Router Dom for the routes and Tailwind Styled-Components and Tailwind CSS for the styles.
 
 ### Screeshot - Desktop
 
@@ -42,7 +40,7 @@ As in the previous project, this one was developed with TypeScript.
 - [Vite](https://vitejs.dev/guide/)
 - [Tailwind Styled-Components](https://www.npmjs.com/package/tailwind-styled-components)
 - [React Form Hook](https://www.react-hook-form.com)
-- [React Router Dom]
+- [React Router Dom](https://www.npmjs.com/package/react-router-dom)
 - [Yup](https://www.npmjs.com/package/yup)
 - [Tailwind CSS](https://tailwindcss.com/)
 
