@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useState, useContext } from 'react'
+
 import { useForm, useController, SubmitHandler } from 'react-hook-form';
 import { useNavigate, Link } from "react-router-dom";
 import { useAppState } from "../../state"
@@ -11,6 +13,10 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
 import { Form, Input, Button } from '../../GlobalStyles';
+
+import { AppStateContext } from '../../state';
+
+import type { AppStateContextType, IInput } from "../../@types/multistep.d.ts"
 
 type Inputs = {
     name: string;
@@ -35,12 +41,25 @@ function Contact() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>({
         resolver: yupResolver(schema)
     });
+
+
+    /**const{saveInput}=useContext(AppStateContext) as AppStateContextType;**/
+
+    const{input}=useContext(AppStateContext) as AppStateContextType;
     
     const navigate = useNavigate();
       
     const onSubmit: SubmitHandler<Inputs> = (data) => {
       
+            
             console.log("data",data);
+            input.name=data.name;
+            input.email=data.email;
+            input.password=data.password;
+            input.confirm_password=data.confirm_password;
+
+            console.log("input",input);
+           
             navigate("/education");
     }
 

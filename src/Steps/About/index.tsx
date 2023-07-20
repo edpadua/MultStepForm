@@ -10,7 +10,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import * as yup from 'yup'
 
-import { Form, Input, Button } from '../../GlobalStyles';
+import { Form, Input, Button, Textarea } from '../../GlobalStyles';
 
 type Inputs = {
     about: string;
@@ -34,7 +34,8 @@ function About() {
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
 
-        console.log("data", data);
+      
+        console.log("data",data);
         navigate("/confirm");
     }
 
@@ -42,7 +43,8 @@ function About() {
     <div>
       <Form onSubmit={(event) =>
                 void handleSubmit(onSubmit)(event)}>
-                <textarea {...register('about')} placeholder="Fale sobre você" />
+                    <Textarea rows={10} {...register('about')} placeholder="Fale sobre você" />
+        
                 <p>{errors.about?.message}</p>
                
                 <Link to="/">

@@ -1,16 +1,46 @@
+import * as React from 'react';
+
 import { createContext, useContext, useState } from "react";
 
-export const AppStateContext = createContext({});
+import { AppStateContextType, IInput } from "./@types/multistep";
 
+export const AppStateContext = React.createContext<AppStateContextType | null>(null);
 
 interface Props {
     children: React.ReactNode;
 }
 
 export const AppProvider: React.FC<Props> = ({ children }) => {
-    const value = useState({});
+    const [input, setInput] = React.useState<IInput>(
+          {
+            name: "",
+            email:"",
+            password:"",
+            confirm_password:"",
+            university:"",
+            degree:"",
+            about:"",
+          }
+    );
+
+    const saveInput = (input: IInput) => {
+        const newInput: IInput = {
+            name: input.name,
+            email:input.email,
+            password:input.password,
+            confirm_password:input.confirm_password,
+            university: input.university,
+            degree: input.university,
+            about: input.about,
+        };
+
+
+        setInput(newInput);
+        console.log("Input",input);
+    };
+
     return (
-        <AppStateContext.Provider value={value}>
+        <AppStateContext.Provider value={{input, saveInput}}>
             {children}
         </AppStateContext.Provider>
     );

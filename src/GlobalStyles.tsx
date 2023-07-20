@@ -8,15 +8,23 @@ export { Form };
 
 
 const Input = tw.input`
-w-full h-10 px-3 mb-2 text-base text-gray-700 placeholder-gray-600 border rounded-lg focus:shadow-outline
+w-full h-10 px-3 mb-2 text-base text-gray-700 placeholder-gray-600 border rounded-xl focus:shadow-outline
 `;
 export { Input };
 
 
 
 const Button = tw.button`
-hover:bg-cyan-400 bg-cyan-500 text-white font-bold py-2 px-4 rounded
+hover:bg-indigo-400 bg-indigo-600 text-white font-bold py-2 px-4 rounded-xl
 `;
 
-
 export { Button };
+
+interface TextAreaProps{
+    rows:number;
+}
+
+const Textarea=tw.textarea<TextAreaProps>`
+w-full h-24 px-3 mb-2 text-base text-gray-700 placeholder-gray-600 border rounded-xl focus:shadow-outline
+`;
+export { Textarea };
