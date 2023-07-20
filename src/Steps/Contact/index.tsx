@@ -35,7 +35,7 @@ const schema = yup.object().shape({
 
 function Contact() {
     
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>({
+    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>({
         resolver: yupResolver(schema)
     });
 

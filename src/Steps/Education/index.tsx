@@ -30,7 +30,7 @@ const schema = yup.object().shape({
 
 function Education() {
 
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>({
+    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>({
         resolver: yupResolver(schema)
     });
 

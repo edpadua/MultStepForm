@@ -1,12 +1,9 @@
 
 
-import {useContext } from 'react'
+
 
 import { useLocation } from "react-router-dom";
 
-import { AppStateContext } from '../../state';
-
-import type { AppStateContextType } from "../../@types/multistep.d.ts"
 
 import tw from "tailwind-styled-components"
 

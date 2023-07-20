@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import {useContext} from "react";
-
 import { AppStateContextType, IInput } from "./@types/multistep";
 
 export const AppStateContext = React.createContext<AppStateContextType | null>(null);
