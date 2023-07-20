@@ -45,7 +45,7 @@ function Contact() {
 
     /**const{saveInput}=useContext(AppStateContext) as AppStateContextType;**/
 
-    const{input}=useContext(AppStateContext) as AppStateContextType;
+    const{ input, step, setStep } =useContext(AppStateContext) as AppStateContextType;
     
     const navigate = useNavigate();
       

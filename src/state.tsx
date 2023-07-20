@@ -23,6 +23,8 @@ export const AppProvider: React.FC<Props> = ({ children }) => {
           }
     );
 
+    const [step, setStep] = React.useState<string>("contact");
+
     const saveInput = (input: IInput) => {
         const newInput: IInput = {
             name: input.name,
@@ -40,7 +42,7 @@ export const AppProvider: React.FC<Props> = ({ children }) => {
     };
 
     return (
-        <AppStateContext.Provider value={{input, saveInput}}>
+        <AppStateContext.Provider value={{input, saveInput, step, setStep}}>
             {children}
         </AppStateContext.Provider>
     );

@@ -13,4 +13,6 @@ export interface IInput{
 export type AppStateContextType = {
     input: IInput;
     saveInput: (input: IInput) => void;
+    step: string;
+    setStep: (step:string)=>void;
   };

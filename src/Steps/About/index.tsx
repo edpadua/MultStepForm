@@ -1,8 +1,9 @@
 import React from 'react'
 
+import { useState, useContext } from 'react'
+
 import { useForm, useController, SubmitHandler } from 'react-hook-form';
 import { useNavigate, Link } from "react-router-dom";
-import { useAppState } from "../../state"
 
 import tw from "tailwind-styled-components"
 
@@ -11,6 +12,10 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
 import { Form, Input, Button, Textarea } from '../../GlobalStyles';
+
+import { AppStateContext } from '../../state';
+
+import type { AppStateContextType, IInput } from "../../@types/multistep.d.ts"
 
 type Inputs = {
     about: string;
@@ -29,6 +34,8 @@ function About() {
     });
 
    
+    const{ input, step, setStep } =useContext(AppStateContext) as AppStateContextType;
+    
     const navigate = useNavigate();
 
 
@@ -36,6 +43,8 @@ function About() {
 
       
         console.log("data",data);
+        input.about = data.about;
+        console.log("input", input);
         navigate("/confirm");
     }
 
@@ -47,9 +56,7 @@ function About() {
         
                 <p>{errors.about?.message}</p>
                
-                <Link to="/">
-                    {"<"} Previous
-                </Link>
+               
                 <Button type="submit">Next {">"}</Button>
             </Form>
     </div>
