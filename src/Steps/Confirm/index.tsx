@@ -1,12 +1,12 @@
-import React from 'react'
 
-import { useState, useContext } from 'react'
+
+import {useContext } from 'react'
 
 import tw from "tailwind-styled-components"
 
 import { AppStateContext } from '../../state';
 
-import type { AppStateContextType, IInput } from "../../@types/multistep.d.ts"
+import type { AppStateContextType } from "../../@types/multistep.d.ts"
 
 const Sucess = tw.h1`
 text-center
@@ -30,7 +30,7 @@ text-lg
 
 function Confirm() {
 
-  const { input, step }  = useContext(AppStateContext) as AppStateContextType;
+  const { input }  = useContext(AppStateContext) as AppStateContextType;
 
   return (
     <div>

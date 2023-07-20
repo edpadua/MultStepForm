@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { createContext, useContext, useState } from "react";
+import {useContext} from "react";
 
 import { AppStateContextType, IInput } from "./@types/multistep";
 
@@ -48,10 +48,3 @@ export const AppProvider: React.FC<Props> = ({ children }) => {
     );
 }
 
-export function useAppState() {
-    const context = useContext(AppStateContext);
-    if (!context) {
-        throw new Error("useAppState must be used within the AppProvider");
-    }
-    return context;
-}

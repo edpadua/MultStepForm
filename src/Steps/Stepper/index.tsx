@@ -1,6 +1,6 @@
-import React from 'react'
 
-import { useState, useContext } from 'react'
+
+import {useContext } from 'react'
 
 import { useLocation } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const Li = tw.li`
 function Stepper() {
     const location = useLocation();
 
-    const { step } = useContext(AppStateContext) as AppStateContextType;
+   
 
     const getLinkClass = (path: string) => {
         return (
