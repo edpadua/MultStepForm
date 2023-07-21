@@ -10,9 +10,9 @@ import tw from "tailwind-styled-components"
 
 const Li = tw.li`
      text-slate-600
-     text-2xl
+     lg:text-2xl
      font-bold
-     text-size
+     text-base
      mr-4
 `;
 
@@ -32,16 +32,16 @@ function Stepper() {
             <div className="navbar-collapse mb-10">
                 <ol className="navbar-nav flex">
                     <Li >
-                        <p className={getLinkClass("/")}>Contact</p>
+                        <p className={getLinkClass("/")}>Contato</p>
                     </Li>
                     <Li >
-                        <span className={getLinkClass("/education")}>Education</span>
+                        <span className={getLinkClass("/education")}>Educação</span>
                     </Li>
                     <Li >
-                        <span className={getLinkClass("/about")}>About</span>
+                        <span className={getLinkClass("/about")}>Sobre</span>
                     </Li>
                     <Li >
-                        <span className={getLinkClass("/confirm")}>Confirm</span>
+                        <span className={getLinkClass("/confirm")}>Confirmar</span>
                     </Li>
                 </ol>
             </div>

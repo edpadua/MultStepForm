@@ -2,6 +2,8 @@
 
 import tw from "tailwind-styled-components"
 
+import { BiSolidUser } from "react-icons/bi"
+
 const Nav = tw.nav`
     bg-indigo-600
     top-0 
@@ -12,12 +14,20 @@ const Nav = tw.nav`
     pt-5
 `;
 
-function Navbar() {
-  return (
-    <Nav>
+const NavContainer = tw.div`
+    px-16 
+    flex
 
-    </Nav>
-  )
+`;
+
+function Navbar() {
+    return (
+        <Nav>
+            <NavContainer className='px-16 flex'>
+                <BiSolidUser style={{ fontSize: '40px', color: "#ffffff" }} />
+            </NavContainer>
+        </Nav>
+    )
 }
 
 export default Navbar
