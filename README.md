@@ -1,7 +1,7 @@
 # MultStepForm
 
 <h1>
-    <a href="http://mult-step-form-nbzz.vercel.app"><img src=""></a>
+    <a href="http://mult-step-form-nbzz.vercel.app"><img src="https://github.com/edpadua/MultStepForm/blob/main/public/multstepform-capture.gif"></a>
 </h1>
 
 # Summary
@@ -19,19 +19,23 @@ of users divided into several steps. This form has four parts, in the first part
 
 For this system, the React Form Hook and Yup library were used to control and validate the forms, React Router Dom for the routes and Tailwind Styled-Components and Tailwind CSS for the styles, in addition to using the Context API to manage the states.
 
-### Screeshot - Desktop
+### Screeshot - Contact
 
-![image]()
-
-### Screeshot - Tablet
-
-![image]()
+![image](https://github.com/edpadua/MultStepForm/assets/4975360/e07f9409-5c01-49d0-ac43-a513c072ce7d)
 
 
-### Screeshot - Mobile
+### Screeshot - Education
 
-<img src="" style="width: 50%;" >
+![image](https://github.com/edpadua/MultStepForm/assets/4975360/d6794fa3-8a30-4f61-9204-c0efe85f7b60)
 
+
+### Screeshot - About
+
+![image](https://github.com/edpadua/MultStepForm/assets/4975360/106d0ebe-d056-428f-bbec-8c1162741c58)
+
+### Screeshot - Confirm
+
+![image](https://github.com/edpadua/MultStepForm/assets/4975360/cabd5544-b5b3-4270-9f76-65ab5b29ac95)
 
 
 ### Technologies
